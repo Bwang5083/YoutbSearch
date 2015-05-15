@@ -14,7 +14,9 @@
             font-family: "Arial", sans-serif;
             font-size: 14px;
             color: #666;
+            margin: 0 auto;
         }
+
         #container {
             width: 100%;
             margin: auto;
@@ -24,9 +26,27 @@
         }
         #videolist {
             width: 100%;
-            margin: auto;
-            background: #fff;
-            padding: 15px;
+            height: 100%;
+            margin-right: -10px;
+            padding: 10px;
+            <!--overflow:hidden;-->
+        }
+        #results {
+            float: left;
+            list-style: none;
+            position: relative;
+            width: 50%;
+            height: 20%;
+            min-width: 250px;
+            overflow:hidden;
+        }
+        #resultsRight {
+            list-style: none;
+            position:relative;
+            width: 50%;
+            height: 20%;
+            min-width: 250px;
+            overflow:hidden;
         }
     </style>
     <script src="js/jquery-1.11.1.min.js"></script>
@@ -38,15 +58,18 @@
         <div class="scrollable-content">
             <div id="container">
                 <div class="col-xs-1">
-                    <img src="image/logo.jpg" width="45" height="30" alt="Logo" />
+                    <img src="image/logo.jpg" class="img-rounded" alt="Logo" width="50" height="33">
                 </div>
-                <div class="col-xs-9">
-                    <input class="form-control" id="userName" type="text">
+                <div class="col-xs-8">
+                    <input class="form-control" id="userName" type="text" placeholder="Input a Youtube user name here">
                 </div>
-                <button type="button" id="search" class="btn btn-primary btn-md">Search</button>
+                <div class="col-xs-1">
+                    <button type="button" id="search" class="btn btn-primary btn-md" title="CLick to search Youtube videos">Search</button>
+                </div>
             </div>
             <div id="videolist">
                 <ul id="results"></ul>
+                <ul id="resultsRight"></ul>
             </div>
         </div>
     </div>

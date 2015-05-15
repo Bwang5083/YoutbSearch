@@ -41,11 +41,22 @@ $(document).ready(function () {
                 $.each(data.items, function (i, item) {
                     console.log(item);
                     videTitle = item.snippet.title;
+                    videTitle = videTitle.substring(0, 25);
                     videoId = item.snippet.resourceId.videoId;
 
-                    //output = '<li>'+videTitle+'</li>';
-                    output = '<li><iframe height="350" width="500" src=\"//www.youtube.com/embed/' + videoId + '\"></iframe></li>';
-                    $('#results').append(output);
+                    output = '<h4>'+videTitle+'</h4>';
+                    //output = '<li><iframe height="350" width="500" src=\"//www.youtube.com/embed/' + videoId + '\"></iframe></li>';
+                    if(i%2 == 0)
+                    {
+                        output += '<li><iframe src=\"https://www.youtube.com/embed/' + videoId + '\"></iframe></li><br />';
+                        $('#results').append(output);
+                    }
+                    else
+                    {
+                        output += '<li><iframe src=\"https://www.youtube.com/embed/' + videoId + '\"></iframe></li><br />';
+                        $('#resultsRight').append(output);
+                    }
+
                 })
             }
         );
