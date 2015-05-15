@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Youtube Search</title>
+    <link rel="shortcut icon" href="image/logo.jpg" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background: #f4f4f4;
+            font-family: "Arial", sans-serif;
+            font-size: 14px;
+            color: #666;
+        }
+        #container {
+            width: 100%;
+            margin: auto;
+            overflow: auto;
+            background: #FFD39B;
+            padding: 10px;
+        }
+        #videolist {
+            width: 100%;
+            margin: auto;
+            background: #fff;
+            padding: 15px;
+        }
+    </style>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <div class="scrollable">
+        <div class="scrollable-content">
+            <div id="container">
+                <div class="col-xs-1">
+                    <img src="image/logo.jpg" width="45" height="30" alt="Logo" />
+                </div>
+                <div class="col-xs-9">
+                    <input class="form-control" id="userName" type="text">
+                </div>
+                <button type="button" id="search" class="btn btn-primary btn-md">Search</button>
+            </div>
+            <div id="videolist">
+                <ul id="results"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
